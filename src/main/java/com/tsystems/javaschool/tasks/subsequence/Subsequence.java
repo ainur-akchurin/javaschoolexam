@@ -1,5 +1,6 @@
 package com.tsystems.javaschool.tasks.subsequence;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class Subsequence {
@@ -14,7 +15,43 @@ public class Subsequence {
      */
     @SuppressWarnings("rawtypes")
     public boolean find(List x, List y) {
-        // TODO: Implement the logic here
-        return false;
+        validate(x,y);
+        return isPossible(x,y);
+    }
+
+    /**
+     *
+     * @param x - first sequence
+     * @param y - second sequence
+     * @return true - if after all operations list x equals list y, otherwise false
+     */
+    private static boolean isPossible(List x, List y){
+
+        if(y.size()<x.size())
+            return false;
+
+        Iterator iteratorY =y.iterator();
+
+        for (Object objectX : x){
+            while (iteratorY.hasNext() && !objectX.equals(iteratorY.next()))
+                iteratorY.remove();
+        }
+        while (iteratorY.hasNext()){
+            iteratorY.next();
+            iteratorY.remove();}
+
+        return x.equals(y);
+    }
+
+    /**
+     * Checking reference for null.
+     * If one of the parameters is null, IllegalArgumentException will be thrown.
+     *
+     * @param x - first sequence
+     * @param y - second sequence
+     */
+    private void validate(List x, List y){
+        if(x==null||y==null)
+            throw new IllegalArgumentException();
     }
 }
