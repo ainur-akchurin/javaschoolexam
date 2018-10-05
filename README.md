@@ -11,7 +11,7 @@ The exam includes 3 tasks to be done: [Calculator](/tasks/Calculator.md), [Pyram
 
 ### Result ###
 
-* Author name : {Ainur Akhcurin}
+* Author name : {Ainur Akchurin}
 * Codeship : {[ ![Codeship Status for ainur-akchurin/javaschoolexam](https://app.codeship.com/projects/c07ff7e0-aaad-0136-d91f-0ad2cc5c470c/status?branch=master)](https://app.codeship.com/projects/309149)}
 
 
